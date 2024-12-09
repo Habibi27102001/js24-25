@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Număr Aleator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    p {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button id="generate-btn">Generează un număr</button>
+    <p id="random-number">Apasă butonul pentru un număr aleator!</p>
+  </div>
+
+  <script>
+    // Selectăm elementele HTML
+    const button = document.getElementById('generate-btn');
+    const output = document.getElementById('random-number');
+
+    // Adăugăm un event listener pe buton
+    button.addEventListener('click', () => {
+      // Generăm un număr aleator între 1 și 100
+      const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+      // Actualizăm textul cu numărul generat
+      output.textContent = `Număr generat: ${randomNumber}`;
+    });
+  </script>
+</body>
+</html>
