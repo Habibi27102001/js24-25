@@ -1,4 +1,4 @@
-- Curs HTML
+- Curs js24-25
 ```
 touch README.md
 ```
