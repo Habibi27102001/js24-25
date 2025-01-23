@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOM încărcat!");
+
+            function salut(val) {
+                if (!val) {
+                    let nume = document.getElementById("nume").value;
+                    console.log(nume);
+                    alert("Buna seara!");
+                } else {
+                    alert("Buna seara, " + val + "!");
+                }
+            }
+
+           
+            let nume = document.getElementById("nume").value;
+            console.log(nume);
+        });
+    </script>
+</head>
+<body>
+    <input type="text" name="nume" id="nume" value="">
+    <button onClick="salut()">Salutare Mihai</button>
+    <button onClick="salut('Ion')">Salutare Ion</button>
+    <button onClick="salut('Vasile')">Salutare Vasile</button>
+</body>
+</html>
+
